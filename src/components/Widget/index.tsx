@@ -4,18 +4,18 @@ import styled from 'styled-components'
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => {
-    return theme.colors.mainBg;
-  }};
+  background: linear-gradient(#000028, #150354, #420B47, #541610, #97020B,#E72838);
   border-radius: 4px;
   overflow: hidden;
   h1, h2, h3 {
+    color: #fff;
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
   }
   p {
+    color: #C4C7EA;
     font-size: 14px;
     font-weight: 400;
     line-height: 1;

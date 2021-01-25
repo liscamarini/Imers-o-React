@@ -21,7 +21,11 @@ const FooterWrapper = styled.footer`
     span {
       text-decoration: underline;
     }
+
   }
+  p {
+      color: #CFD2F5;
+    }
 `;
 
 export default function Footer(props) {
