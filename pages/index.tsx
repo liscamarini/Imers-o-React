@@ -42,7 +42,7 @@ export default function Home() {
         </Widget>
         <Footer />
         </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/liscamarini" />
+      <GitHubCorner projectUrl="https://github.com/liscamarini/Imersao-React" />
 
 
     </QuizBackground>
