@@ -31,5 +31,13 @@ const QuizBackground = styled.div`
     }
   }
 `;
+QuizBackground.Image = styled.div`
+  height: 148px;
+  width: 350px;
+  background-size: cover;
+  background-image: url(${({ backgroundImage }) => backgroundImage});
+  background-color: ${({ theme }) => theme.colors.mainBg};
+  flex: 1;
+`;
 
 export default QuizBackground;

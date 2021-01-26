@@ -33,6 +33,7 @@ Widget.Header = styled.header`
   * {
     margin: 0;
   }
+
 `;
 
 Widget.Content = styled.div`
@@ -108,5 +109,9 @@ Widget.Button = styled.div`
       }
 
 `;
+
+Widget.Icon = styled.div`
+  margin-right: 10px;
+ `;
 
 export default Widget;
