@@ -1,3 +1,4 @@
+import { shade } from 'polished';
 import styled from 'styled-components'
 
  const Widget = styled.div`
@@ -46,7 +47,66 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+
+  input {
+    margin-top: 24px;
+    /* margin-bottom: 24px; */
+    width: 250px;
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    background-color: #10101C;
+    border-radius: 5px ;
+    color: #fff;
+    border: 2px solid #5E1017;
+    border-right: 0;
+
+    &::placeholder {
+      color: #a8a8b3;
+    }
+  }
+
+  button {
+        margin-top: 24px;
+        /* margin-bottom: 24px; */
+        width: 286px;
+        height: 40px;
+        background: #5C5EEB;
+        border-radius: 5px ;
+        border: 0;
+        color: #fff;
+        font-weight: bold;
+        transition: background-color 0.2s;
+        &:hover {
+          background: ${shade(0.2, '#8986EB')};
+        }
+  }
+
 `;
 
+
+Widget.Button = styled.div`
+        margin-top: 9px;
+
+        width: 286px;
+        height: 40px;
+        justify-content: center;
+        align-content: center;
+        background:linear-gradient(#10101C,#000028, #36207e, #4d14ff);
+        border-radius: 5px ;
+        border: 0;
+        color: #fff;
+
+        font-weight: bold;
+        transition: background-color 0.2s;
+        &:hover {
+          background: ${shade(0.2, '#ff8998')};
+        }
+      h4 {
+        line-height: 36px;
+        margin-left: 16px;
+      }
+
+`;
 
 export default Widget;
