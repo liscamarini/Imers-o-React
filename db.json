@@ -2,19 +2,68 @@
   "bg": "https://www.pixel4k.com/wp-content/uploads/2018/04/Avengers%20Infinity%20War284498051.jpg",
   "title": "Avengers Infinity",
   "description": "Teste os seus conhecimentos sobre Avengers Infinity e divirta-se!",
-  "questions":
+  "questions": [
     {
       "image": "https://www.pixel4k.com/wp-content/uploads/2020/11/rocket-avengers-end-game-4k_1606594878-1536x864.jpg",
-      "title": "Pergunta 1 de 5",
-      "description": "Rocket Raccoon foi inspirado por uma música de uma banda inglesa, Qual?",
-      "answer": 4,
+      "title": "Rocket Raccoon foi inspirado por uma música de uma banda inglesa, Qual?",
+      "description": "Não posso prometer que não vou matar vocês quando isto acabar.",
+      "answer": 2,
       "alternatives": [
         "Rammstein",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Rocky Raccoon",
+        "Beatles",
+        "The Who"
       ]
     },
+    {
+      "image": "https://www.pixel4k.com/wp-content/uploads/2020/11/black-widow-avengers-end-game-4k_1606594827-1536x864.jpg",
+      "title": "Em que ano foi a primeira aparição da Viúva Negra?",
+      "description": "Não disse que deveríamos ir embora. Há formas piores de morrer. Onde mais conseguiria uma vista assim ?",
+      "answer": 3,
+      "alternatives": [
+        "1998",
+        "1957",
+        "1946",
+        "1964"
+      ]
+    },
+    {
+      "image": "https://www.pixel4k.com/wp-content/uploads/2019/10/hulk-marvels-avengers_1572369873.jpg",
+      "title": "Qual tipo de ataque Hulk é imune?",
+      "description": "De acordo com meus cálculos, isto vai te machucar.",
+      "answer": 0,
+      "alternatives": [
+        "Psíquico",
+        "Aos ataques de Tony Stark",
+        "Raiva",
+        "Ao amor da Viúva Negra"
+      ]
+    },
+    {
+      "image": "https://www.pixel4k.com/wp-content/uploads/2019/10/black-panther-arts_1570394326.jpg",
+      "title": "T'Challa também é conhecido pelo seu relacionamento com outro personagem de um outro HQ, consegue acertar ?",
+      "description": "#WAKANDAFOREVER",
+      "answer": 2,
+      "alternatives": [
+        "Lanterna Verde => Liga da Justiça",
+        "Groot => Guardiões da Galaxia",
+        "Tempestade => X-Man",
+        "Zordon => Power Rangers"
+      ]
+    },
+    {
+      "image": "https://miro.medium.com/max/480/1*ti7reZT-bEk2ctjA6VaWMQ.gif",
+      "title": "Qual Avengers derrotou Thanos?",
+      "description": "Eu vou mergulhar a galáxia no seu sangue...",
+      "answer": 2,
+      "alternatives": [
+        "Mantis",
+        "Thor",
+        "Homem de Ferro",
+        "Capitã Marvel"
+      ]
+    }
+  ],
 
   "external": [
     ""
@@ -24,7 +73,7 @@
       "primary": "#0E1338",
       "secondary": "#400065",
 
-      "contrastText": "#FFFFFF",
+      "contrastText": "#c9c9c9",
       "wrong": "#FF020B",
       "success": "#0EA438"
     },

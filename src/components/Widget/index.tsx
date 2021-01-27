@@ -50,10 +50,6 @@ Widget.Content = styled.div`
   }
 
   input {
-    margin-top: 24px;
-    /* margin-bottom: 24px; */
-    width: 250px;
-    height: 40px;
     padding: 0 16px;
     border: 0;
     background-color: #10101C;
@@ -81,14 +77,13 @@ Widget.Content = styled.div`
         &:hover {
           background: ${shade(0.2, '#8986EB')};
         }
+
+
   }
-
 `;
-
 
 Widget.Button = styled.div`
         margin-top: 9px;
-
         width: 286px;
         height: 40px;
         justify-content: center;
@@ -97,7 +92,6 @@ Widget.Button = styled.div`
         border-radius: 5px ;
         border: 0;
         color: #fff;
-
         font-weight: bold;
         transition: background-color 0.2s;
         &:hover {
@@ -107,11 +101,29 @@ Widget.Button = styled.div`
         line-height: 36px;
         margin-left: 16px;
       }
-
 `;
 
 Widget.Icon = styled.div`
   margin-right: 10px;
  `;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+   color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+`;
+
 
 export default Widget;
