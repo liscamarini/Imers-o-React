@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FiChevronLeft } from 'react-icons/fi';
 
-import db from '../db.json';
-import QuizContainer from '../src/components/QuizContainer';
-import Footer from '../src/components/Footer';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
-import Widget from '../src/components/Widget';
-import Button from '../src/components/Button';
-import QuizResult from '../src/components/QuizResult';
+import db from '../../../db.json';
+import QuizContainer from '../../components/QuizContainer';
+import Footer from '../../components/Footer';
+import QuizBackground from '../../components/QuizBackground';
+import QuizLogo from '../../components/QuizLogo';
+import Widget from '../../components/Widget';
+import Button from '../../components/Button';
+import QuizResult from '../../components/QuizResult';
 
 function LoadingWidget(){
   return (
@@ -37,6 +36,10 @@ function QuestionWidget({
   onSubmit,
 }) {
   const questionId = `question__${questionIndex}`;
+  const [selectedAlternative, setSelectedAlternative] = useState(undefined);
+  const [isQuestionSubmit, setIsQuestionSubmit] = useState(false);
+  const isCorrect = selectedAlternative === question.answer;
+  const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
     <Widget>
       <Widget.Header>
@@ -65,7 +68,13 @@ function QuestionWidget({
         <form
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
-            onSubmit();
+            setIsQuestionSubmit(true);
+            setTimeout(() => {
+              onSubmit();
+              setIsQuestionSubmit(false);
+              setSelectedAlternative(undefined);
+            }, 2 * 1000);
+
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -78,16 +87,21 @@ function QuestionWidget({
                 <input
                   id={alternativeId}
                   name={questionId}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}
               </Widget.Topic>
             );
           })}
-          <Button type="submit">
+          <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
+          <p>Alternativa: {`${selectedAlternative}`}</p>
+          {isQuestionSubmit && isCorrect && <p>Você Acertooou!!!</p>}
+          {isQuestionSubmit && !isCorrect && <p>Erroooou!!!</p>}
         </form>
+
       </Widget.Content>
     </Widget>
   );
@@ -104,6 +118,15 @@ const QuizPage: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
+  const [results, setResults] = useState([]);
+
+  function addResult(result) {
+    setResults([
+      ...results,
+      result,
+    ]);
+  }
+
 
 
   useEffect(() => {

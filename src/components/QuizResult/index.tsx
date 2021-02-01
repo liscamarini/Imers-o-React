@@ -11,7 +11,7 @@ const QuizResult: React.FC = () => {
     <Widget>
       <Widget.Header>
         <h3>
-          Parabéns você acerto: {question.answer}
+          Parabéns você acerto: 0
         </h3>
       </Widget.Header>
       <Widget.Content>
